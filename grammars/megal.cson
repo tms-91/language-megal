@@ -92,8 +92,7 @@ patterns: [
         name: "variable.parameter.function.megal"
       "8":
         name: "keyword.operator.other.megal"
-    comment: "match stuff like: HOW DUZ I <function name> [YR <argument1> [AN YR <argument2> ...]]"
-    #match: "(HOW DUZ I)\\s([a-zA-Z][\\w]*)\\s(YR)\\s(\\w*)(\\s(AN YR)\\s(\\w*))*"
+    comment: "Matches MegaL functions"
     match: "^\\s*(\\??[\\w]+)\\s*(:)\\s*(\\??[\\w]+)\\s*(#\\s+(\\??[\\w]+))*\\s+(\\->)\\s+(\\??[\\w]+)\\s*(\\.)"
     name: "meta.function.megal"
   }
@@ -107,8 +106,7 @@ patterns: [
         name: "variable.parameter.function.megal"
       "4":
        name: "keyword.operator.other.megal"
-    comment: "match stuff like: HOW DUZ I <function name> [YR <argument1> [AN YR <argument2> ...]]"
-    #match: "(HOW DUZ I)\\s([a-zA-Z][\\w]*)\\s(YR)\\s(\\w*)(\\s(AN YR)\\s(\\w*))*"
+    comment: "Matches Single Line Statements"
     match: "^\\s*(\\??[\\w]+)\\s+(:|<)\\s+(\\??[\\w]+)\\s*(\\.)"
     name: "meta.entity.megal"
   }
@@ -124,8 +122,6 @@ patterns: [
         name: "variable.parameter.function.megal"
       "6":
         name: "keyword.operator.other.megal"
-    comment: "match stuff like: HOW DUZ I <function name> [YR <argument1> [AN YR <argument2> ...]]"
-    #match: "(HOW DUZ I)\\s([a-zA-Z][\\w]*)\\s(YR)\\s(\\w*)(\\s(AN YR)\\s(\\w*))*"
     match: "^\\s*(\\??[\\w]+)\\s*(<)\\s*(\\??[\\w]+)\\s*(#\\s*(\\??[\\w]+))*\\s*(\\.|;)"
     name: "meta.relation.megal"
   }
