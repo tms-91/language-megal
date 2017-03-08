@@ -1,0 +1,14 @@
+{
+  "name": "language-megal",
+  "version": "0.0.1",
+  "description": "MegaL language syntax highlighting",
+  "keywords": [
+  ],
+  "repository": "https://github.com/tms-91/language-megal",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
