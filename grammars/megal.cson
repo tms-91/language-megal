@@ -29,7 +29,7 @@ patterns: [
   }
   {
     begin: "^\\s*(\\??[\\w]+)\\s*(:|<)\\s*(\\??[\\w]+)\\s*(;)\\r?\\n"
-    end: "\\s+((defines|elementOf|conformsTo|correspondsTo|embeddedInto|partOf|hasRole|manifestsAs|implements|participantOf|belongsTo|supports|realizes|uses|facilitates|subsetOf|represents|refersTo|aspectOf|subdomainOf)\\s+(\\??[\\w]+)|(=)\\s+(\"[\\w\\-\\./\\?=&:%]*\"))\\s*(\\.)"
+    end: "\\s+((defines|elementOf|conformsTo|correspondsTo|embeddedInto|partOf|hasRole|manifestsAs|implements|participantOf|belongsTo|supports|realizes|uses|facilitates|subsetOf|represents|refersTo|aspectOf|subdomainOf|dialectOf|encodes)\\s+(\\??[\\w]+)|(=)\\s+(\"[\\w\\-\\./\\?=&:%]*\"))\\s*(\\.)"
     beginCaptures:
       "1":
         name: "entity.name.function.megal"
@@ -52,7 +52,7 @@ patterns: [
         name: "keyword.operator.other.megal"
     patterns: [
       {
-        match: "^\\s+(defines|elementOf|conformsTo|correspondsTo|embeddedInto|partOf|hasRole|manifestsAs|implements|participantOf|belongsTo|supports|realizes|uses|facilitates|subsetOf|represents|refersTo|aspectOf|subdomainOf)\\s+(\\??[\\w]+)\\s*(;)"
+        match: "^\\s+(defines|elementOf|conformsTo|correspondsTo|embeddedInto|partOf|hasRole|manifestsAs|implements|participantOf|belongsTo|supports|realizes|uses|facilitates|subsetOf|represents|refersTo|aspectOf|subdomainOf|dialectOf|encodes)\\s+(\\??[\\w]+)\\s*(;)"
         name: "meta.function.megal"
         captures:
           "1":
