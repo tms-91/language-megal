@@ -28,8 +28,8 @@ patterns: [
     name: "comment.block.megal"
   }
   {
-    begin: "^\\s*(\\??[\\w]+)\\s*(:|<)\\s*(\\??[\\w]+)\\s*(;)\\r?\\n"
-    end: "\\s+((defines|elementOf|conformsTo|correspondsTo|embeddedInto|partOf|hasRole|manifestsAs|implements|participantOf|belongsTo|supports|realizes|uses|facilitates|subsetOf|represents|refersTo|aspectOf|subdomainOf|dialectOf|encodes)\\s+(\\??[\\w]+)|(=)\\s+(\"[\\w\\-\\./\\?=&:%]*\"))\\s*(\\.)"
+    begin: "^\\s*(\\??[\\w\\.]+)\\s*(:|<)\\s*(\\??[\\w\\.]+)\\s*(;)\\r?\\n"
+    end: "\\s+((defines|elementOf|conformsTo|correspondsTo|embeddedInto|partOf|hasRole|manifestsAs|implements|participantOf|belongsTo|supports|realizes|uses|facilitates|subsetOf|represents|refersTo|aspectOf|subdomainOf|dialectOf|encodes)\\s+(\\??[\\w\\.]+)|(=)\\s+(\"[\\w\\-\\./\\?=&:%]*\"))\\s*(\\.)"
     beginCaptures:
       "1":
         name: "entity.name.type.megal"
@@ -52,7 +52,7 @@ patterns: [
         name: "keyword.operator.other.megal"
     patterns: [
       {
-        match: "^\\s+(defines|elementOf|conformsTo|correspondsTo|embeddedInto|partOf|hasRole|manifestsAs|implements|participantOf|belongsTo|supports|realizes|uses|facilitates|subsetOf|represents|refersTo|aspectOf|subdomainOf|dialectOf|encodes)\\s+(\\??[\\w]+)\\s*(;)"
+        match: "^\\s+(defines|elementOf|conformsTo|correspondsTo|embeddedInto|partOf|hasRole|manifestsAs|implements|participantOf|belongsTo|supports|realizes|uses|facilitates|subsetOf|represents|refersTo|aspectOf|subdomainOf|dialectOf|encodes)\\s+(\\??[\\w\\.]+)\\s*(;)"
         name: "meta.function.megal"
         captures:
           "1":
@@ -93,7 +93,7 @@ patterns: [
       "8":
         name: "keyword.operator.other.megal"
     comment: "Matches MegaL functions"
-    match: "^\\s*(\\??[\\w]+)\\s*(:)\\s*(\\??[\\w]+)\\s*(\\s*#\\s+(\\??[\\w]+))*\\s+(\\->)\\s+(\\??[\\w]+)\\s*(\\.)"
+    match: "^\\s*(\\??[\\w\\.]+)\\s*(:)\\s*(\\??[\\w\\.]+)\\s*(\\s*#\\s+(\\??[\\w\\.]+))*\\s+(\\->)\\s+(\\??[\\w\\.]+)\\s*(\\.)"
     name: "meta.relation.megal"
   }
   {
@@ -107,7 +107,7 @@ patterns: [
       "4":
        name: "keyword.operator.other.megal"
     comment: "Matches Single Line Statements"
-    match: "^\\s*(\\??[\\w]+)\\s+(:|<)\\s+(\\??[\\w]+)\\s*(\\.)"
+    match: "^\\s*(\\??[\\w\\.]+)\\s+(:|<)\\s+(\\??[\\w\\.]+)\\s*(\\.)"
     name: "meta.entity.megal"
   }
   {
@@ -122,7 +122,7 @@ patterns: [
         name: "variable.other.megal"
       "6":
         name: "keyword.operator.other.megal"
-    match: "^\\s*(\\??[\\w]+)\\s*(<)\\s*(\\??[\\w]+)\\s*(#\\s*(\\??[\\w]+))*\\s*(\\.|;)"
+    match: "^\\s*(\\??[\\w\\.]+)\\s*(<)\\s*(\\??[\\w\\.]+)\\s*(#\\s*(\\??[\\w\\.]+))*\\s*(\\.|;)"
     name: "meta.relation.megal"
   }
   {
@@ -135,7 +135,7 @@ patterns: [
         name: "variable.other.megal"
       "4":
         name: "keyword.operator.other.megal"
-    match: "^\\s*(\\??[\\w]+)\\s+(defines|elementOf|conformsTo|correspondsTo|embeddedInto|partOf|hasRole|manifestsAs|implements|participantOf|belongsTo|supports|realizes|uses|facilitates|subsetOf|represents|refersTo|aspectOf|subdomainOf)\\s+(\\??[\\w]+)\\s*(\\.)"
+    match: "^\\s*(\\??[\\w\\.]+)\\s+(defines|elementOf|conformsTo|correspondsTo|embeddedInto|partOf|hasRole|manifestsAs|implements|participantOf|belongsTo|supports|realizes|uses|facilitates|subsetOf|represents|refersTo|aspectOf|subdomainOf)\\s+(\\??[\\w\\.]+)\\s*(\\.)"
     name: "meta.relation.megal"
   }
 
