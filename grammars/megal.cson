@@ -5,8 +5,49 @@ name: "MegaL"
 scopeName: "source.megal"
 patterns: [
   {
-    match: "\\b(import|module|where)\\b"
-    name: "keyword.control.megal"
+    match: "^\\s*(module)\\s+([\\w\\.]+)"
+    captures:
+      "1":
+        name: "keyword.control.megal"
+    name: "meta.relation.megal"
+    comment: "MegaL module specification"
+  }
+  {
+    begin: "^\\s*(import)\\s+([\\w\\.]+)\\s+(where)\\s+{"
+    end: "^\\s*}"
+    beginCaptures:
+      "1":
+        name: "keyword.control.megal"
+      "3":
+        name: "keyword.control.megal"
+    patterns: [
+      {
+        begin: "^\\s+\\["
+        end: "\\],?"
+        patterns: [
+          {
+            match: "(\\??[\\w\\.]+)\\s+/\\s+(\\??[\\w\\.]+),?"
+            captures:
+              "1":
+                name: "entity.name.type.megal"
+              "2":
+                name: "entity.name.type.megal"
+            name: "meta.relation.megal"
+          }
+        ]
+        name: "meta.relation.megal"
+      }
+    ]
+    name: "meta.relation.megal"
+    comment: "MegaL import with substitution"
+  }
+  {
+    match: "^\\s*(import)\\s+([\\w\\.]+)"
+    captures:
+      "1":
+        name: "keyword.control.megal"
+    name: "meta.relation.megal"
+    comment: "MegaL import"
   }
   {
     begin: "\""
@@ -154,6 +195,24 @@ patterns: [
       "4":
         name: "keyword.operator.other.megal"
     match: "^\\s*(\\??[\\w\\.]+)\\s+(\\w+)\\s+(\\??[\\w\\.]+)\\s*(\\.)"
+    name: "meta.relation.megal"
+  }
+  {
+     captures:
+      "1":
+        name: "entity.name.function.megal"
+      "2":
+        name: "entity.name.type.megal"
+      "4":
+        name: "entity.name.type.megal"
+      "5":
+        name: "keyword.operator.assignment.megal"
+      "6":
+        name: "entity.name.type.megal"
+      "7":
+        name: "keyword.operator.other.megal"
+    comment: "Matches MegaL function applications"
+    match: "^\\s*([\\w\\.]+)\\((\\??[\\w\\.]+)(\\s*,?\\s*(\\??[\\w\\.]+))*\\)\\s+(\\|\\->)\\s*(\\??[\\w\\.]+)\\s*(\\.)"
     name: "meta.relation.megal"
   }
 
